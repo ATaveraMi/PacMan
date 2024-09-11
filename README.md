@@ -28,6 +28,4 @@ Se ha implementado un cambio de color al tablero:
 
 - Se modificó el ontimer(func, time), para hacer que los ghosts vayan más rápido.
 
-### Código clave
 
-Se añadieron las funciones `distance` y `best_direction` para calcular la distancia más cercana entre Pac-Man y los fantasmas.
