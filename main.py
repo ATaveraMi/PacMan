@@ -113,7 +113,7 @@ def best_direction(point, pacman, course):
 
 def world():
     """Draw world using path."""
-    bgcolor('black')
+    bgcolor('green')
     path.color('blue')
 
     for index in range(len(tiles)):
@@ -157,7 +157,7 @@ def move():
         # Aca se termina usando la formula euclidiana para mover al fantasma en la mejor dirección
         new_course = best_direction(point, pacman, course)
         point.move(new_course)
-        course.x, course.y = new_course.x, new_course.y
+        course.x, course.y = new_course.x , new_course.y 
 
         up()
         goto(point.x + 10, point.y + 10)
@@ -169,7 +169,7 @@ def move():
         if abs(pacman - point) < 20:
             return
 
-    ontimer(move, 100)
+    ontimer(move, 50)#Hacerlos más rápidos
 
 
 def change(x, y):
@@ -186,7 +186,7 @@ writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
 listen()
-onkey(lambda: change(5, 0), 'Right')
+onkey(lambda: change(4, 0), 'Right')
 onkey(lambda: change(-5, 0), 'Left')
 onkey(lambda: change(0, 5), 'Up')
 onkey(lambda: change(0, -5), 'Down')
